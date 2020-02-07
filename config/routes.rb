@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'gameposts/index'
-  get 'gameposts/new'
-  get 'gameposts/create'
-  get 'gameposts/show'
-  get 'gameposts/destroy'
-  get 'gameposts/edit'
-  get 'gameposts/update'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'gameposts#index'
+  get 'gameposts' =>  'gameposts#index'
+  get 'gameposts/new' => 'gameposts#new'
+  post 'gameposts' => 'gameposts#create'
+  get 'users/:id' => 'users#show'
+  get 'gameposts/:id' => 'gameposts#show'
+  get 'gameposts/:id/destroy' => 'gameposts#destroy'
+  get '/gameposts/gameposts/:id/edit' => 'gameposts#edit'
+  patch 'gameposts/:id' => 'gameposts#update'
 end
