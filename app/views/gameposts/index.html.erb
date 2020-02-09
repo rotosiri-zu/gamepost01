@@ -1,2 +1,18 @@
-<h1>Gameposts#index</h1>
-<p>Find me in app/views/gameposts/index.html.erb</p>
+<main class="content">
+  <div class="top-content">
+    <div class="content-box">
+      <div class="card">
+        <% @games.each do |game| %>
+        <div class="box">
+          <a class="links" href="/gameposts/<%= game.id %>"><img class="content_post" src="<%= game.image %>;"></a>
+            <figcaption><%= simple_format(game.name) %></figcaption>
+          </div>
+        <% end %>
+      </div>
+    <div>
+  </div>  
+</main>
+
+<footer>
+  <%= paginate(@games)%>
+</footer>
