@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'gameposts#index'
   get 'gameposts' =>  'gameposts#index'
   get 'gameposts/new' => 'gameposts#new'
