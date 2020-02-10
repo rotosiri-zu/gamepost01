@@ -8,7 +8,7 @@ class GamepostsController < ApplicationController
   end
 
   def create
-    Game.create(name: game_params[:name], image: game_params[:image], text: 
+    @games = Game.create(name: game_params[:name], image: game_params[:image], text: 
     game_params[:text], platform: game_params[:platform], genre: game_params[:genre], user_id: current_user.id)
   end
 
