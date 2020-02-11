@@ -70,5 +70,3 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'rails-i18n'
 gem 'devise-i18n-views'
-
-
