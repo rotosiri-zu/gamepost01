@@ -23,18 +23,18 @@ services:
     #   - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
     tty: true
 
-  nginx:
-    build: 
-      context: containers/nginx
-    volumes:
-      - public-data:/sagittarius/public
-      - tmp-data:/sagittarius/tmp  
-    ports:
-      - "80:80"
-    depends_on:
-      - web
-volumes:
-  public-data:
-  tmp-data:
-  log-data:
-  db-data:
+#   nginx:
+#     build: 
+#       context: containers/nginx
+#     volumes:
+#       - public-data:/sagittarius/public
+#       - tmp-data:/sagittarius/tmp  
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - web
+# volumes:
+#   public-data:
+#   tmp-data:
+#   log-data:
+#   db-data:
