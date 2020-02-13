@@ -1,4 +1,4 @@
-version: '２'
+version: '2'
 services:
   db:
     image: mysql:5.7
