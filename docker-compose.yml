@@ -22,7 +22,7 @@ services:
     # environment:
     #   - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
     tty: true
-    
+
   nginx:
     build: 
       context: containers/nginx
@@ -33,3 +33,8 @@ services:
       - "80:80"
     depends_on:
       - web
+volumes:
+  public-data:
+  tmp-data:
+  log-data:
+  db-data:
