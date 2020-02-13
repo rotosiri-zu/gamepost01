@@ -22,7 +22,8 @@ services:
     # environment:
     #   - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
     tty: true
-
+    
+  nginx:
     build: 
       context: containers/nginx
     volumes:
