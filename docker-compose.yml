@@ -25,9 +25,10 @@ services:
 
     build: 
       context: containers/nginx
+    volumes:
+      - public-data:/sagittarius/public
+      - tmp-data:/sagittarius/tmp  
     ports:
       - "80:80"
-    volumes_from:
-      - web
     depends_on:
       - web
