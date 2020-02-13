@@ -1,4 +1,4 @@
-version: '3'
+version: '２'
 services:
   db:
     image: mysql:5.7
@@ -23,6 +23,15 @@ services:
     #   - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
     tty: true
 
+  nginx:
+    build: containers/nginx
+    ports:
+      - "80:80"
+    volumes_from:
+      - web
+    depends_on:
+      - web
+  
 #   nginx:
 #     build: 
 #       context: containers/nginx
