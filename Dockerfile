@@ -1,7 +1,7 @@
-FROM ruby:2.5.3
+FROM ruby:2.5.3-alpine3.8
 
 ENV RUNTIME_PACKAGES="linux-headers libxml2-dev make gcc libc-dev nodejs tzdata mysql-client mysql-dev yarn vim" \
-    # CHROME_PACKAGES="chromium-chromedriver zlib-dev chromium xvfb wait4ports xorg-server dbus ttf-freefont mesa-dri-swrast udev" \
+    CHROME_PACKAGES="chromium-chromedriver zlib-dev chromium xvfb wait4ports xorg-server dbus ttf-freefont mesa-dri-swrast udev" \
     BUILD_PACKAGES="build-base curl-dev" \
     LANG=C.UTF-8 \
     TZ=Asia/Tokyo
