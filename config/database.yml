@@ -50,7 +50,6 @@ test:
 #
 production:
   <<: *default
-  host: <% Rails.application.credentials.dig(:rds, :host) %>
-  database: <% Rails.application.credentials.dig(:rds, :database) %>
-  username: <% Rails.application.credentials.dig(:rds, :username) %>
-  password: <% Rails.application.credentials.dig(:rds, :password) %>
+  database: gamepost01_production
+  username: gamepost01
+  password: <%= ENV['GAMEPOST01_DATABASE_PASSWORD'] %>
