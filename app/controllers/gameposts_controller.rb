@@ -5,6 +5,7 @@ class GamepostsController < ApplicationController
   end
 
   def new
+    @games = Game.new
   end
 
   def create
