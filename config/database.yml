@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: sagittarius_development
+  database: gamepost01_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: sagittarius_test
+  database: gamepost01_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,7 +49,6 @@ test:
 #
 production:
   <<: *default
-  host: <% Rails.application.credentials.dig(:rds, :host) %>
-  database: <% Rails.application.credentials.dig(:rds, :database) %>
-  username: <% Rails.application.credentials.dig(:rds, :username) %>
-  password: <% Rails.application.credentials.dig(:rds, :password) %>
+  database: gamepost01_production
+  username: gamepost01
+  password: <%= ENV['GAMEPOST01_DATABASE_PASSWORD'] %>
