@@ -10,9 +10,9 @@ services:
 
   web:
     build: .
-    command: bundle exec puma -C /gamepost01/config/puma.rb
+    command: bundle exec puma -C /sagittarius/config/puma.rb
     volumes:
-      - .:/gamepost01
+      - .:/sagittarius
     ports:
       - "3000:3000"
     links:

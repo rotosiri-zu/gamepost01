@@ -13,8 +13,8 @@ RUN apk update && \
     apk add --virtual build-packages --no-cache ${BUILD_PACKAGES} && \
     apk del build-packages
 
-RUN mkdir /gamepost01
-ENV APP_ROOT /gamepost01
+RUN mkdir /sagittarius
+ENV APP_ROOT /sagittarius
 WORKDIR $APP_ROOT
 
 ADD ./Gemfile $APP_ROOT/Gemfile
