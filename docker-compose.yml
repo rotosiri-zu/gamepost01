@@ -1,0 +1,41 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
+    command: bundle exec puma -C config/puma.rb
+    volumes:
+      - .:/sagittarius
+      - public-data:/sagittarius/public
+      - tmp-data:/sagittarius/tmp
+      - log-data:/sagittarius/log
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
+    ports:
+      - "5432:5432"
+  # environment:
+  #   RAILS_ENV: 'production'
+  web:
+    build:
+      context: containers/nginx
+    volumes:
+      - public-data:/sagittarius/public
+      - tmp-data:/sagittarius/tmp
+    ports:
+      - 80:80
+    depends_on:
+      - app
+volumes:
+  public-data:
+  tmp-data:
+  log-data:
+  db-data:
+
