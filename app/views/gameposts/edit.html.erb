@@ -1,0 +1,17 @@
+<div class="contents-row">
+  <div class="container">
+    <%= form_tag("/gameposts/#{@games.id}",method: :patch, multipart: :true) do %>
+      <h3>投稿する</h3>
+      <input class="img" type="file" name="image">
+      <h3 class="game">ゲーム名</h3>
+      <input class="name" placeholder="ゲーム名" type="text" name="name">
+      <h3>platform</h3>
+       <input class="name" placeholder="platform" type="text" name="platform">
+       <h3>genre</h3>
+       <input class="name" placeholder="genre" type="text" name="genre">
+       <h3>ゲームの説明文</h3>
+       <textarea class="text" placeholder="ゲームの説明文を入力してください。168文字まで" name="text" cols="21" rows="8"></textarea>
+      <div class="button_wrapper"><input class="btn" type="submit" value="送信する"></div>
+      <% end %>
+  </div>
+</div>
