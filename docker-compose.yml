@@ -18,10 +18,10 @@ services:
     links:
       - db
 
-    # environment:
-    #   RAILS_ENV: 'production'
     environment:
-      - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
+      RAILS_ENV: 'production'
+    # environment:
+    #   - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
     tty: true
   nginx:
     build: containers/nginx
