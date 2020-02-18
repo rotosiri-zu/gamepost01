@@ -31,4 +31,3 @@ services:
       - web
     depends_on:
       - web
-      
