@@ -3,7 +3,7 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     parallelism: 3 # run three instances of this job in parallel
     docker: # run the steps with Docker
-      - image: circleci/ruby:2.5.3-jessie-node # ...with this image as the primary container; this is where all `steps` will run
+      - image: ruby:2.5-stretch-node-browsers-legacy # ...with this image as the primary container; this is where all `steps` will run
         environment: # environment variables for primary container
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -11,11 +11,11 @@ jobs: # a collection of steps
           PGHOST: 127.0.0.1
           PGUSER: circleci-demo-ruby
           RAILS_ENV: test
-      - image: circleci/postgres:9.5-alpine # database image
+      - image: circleci/mysql:5.7-ram # database image
         environment: # environment variables for database
-          POSTGRES_USER: circleci-demo-ruby
-          POSTGRES_DB: rails_blog
-          POSTGRES_PASSWORD: ""
+          POSTGRES_USER: gamepost01__test
+          POSTGRES_DB: root
+          POSTGRES_PASSWORD: password
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
 
@@ -42,28 +42,28 @@ jobs: # a collection of steps
             - vendor/bundle
 
       # Only necessary if app uses webpacker or yarn in some other way
-      - restore_cache:
-          keys:
-            - rails-demo-yarn-{{ checksum "yarn.lock" }}
-            - rails-demo-yarn-
+      # - restore_cache:
+      #     keys:
+      #       - rails-demo-yarn-{{ checksum "yarn.lock" }}
+      #       - rails-demo-yarn-
 
-      - run:
-          name: Yarn Install
-          command: yarn install --cache-folder ~/.cache/yarn
+      # - run:
+      #     name: Yarn Install
+      #     command: yarn install --cache-folder ~/.cache/yarn
 
       # Store yarn / webpacker cache
-      - save_cache:
-          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
+      # - save_cache:
+      #     key: rails-demo-yarn-{{ checksum "yarn.lock" }}
+      #     paths:
+      #       - ~/.cache/yarn
 
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
-      - run:
-          name: Database setup
-          command: bin/rails db:schema:load --trace
+      # - run:
+      #     name: Database setup
+      #     command: bin/rails db:schema:load --trace
 
       - run:
           name: Run rspec in parallel
