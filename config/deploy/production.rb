@@ -60,10 +60,14 @@
 #     # password: "please use keys"
 #   }
 
-server '18.178.182.52', user: 'hiroki', roles: %w{app db web}
+set :branch, 'master'
 
-set :ssh_options,
-    keys: %w[~/.ssh/hauyvf_key_rsa],
+server '18.178.182.52',
+  user: 'hiroki',
+  roles: %w[web app db],
+  port: 22,
+  ssh_options: {
+    user: 'hiroki',
+    keys: [File.expand_path('~/.ssh/hauyvf_key_rsa')],
     forward_agent: true,
-    auth_methods: %w[publickey]
-    
+  }
