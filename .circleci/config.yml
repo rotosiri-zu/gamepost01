@@ -3,7 +3,7 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     parallelism: 3 # run three instances of this job in parallel
     docker: # run the steps with Docker
-      - image: ruby:2.5-stretch-node-browsers-legacy # ...with this image as the primary container; this is where all `steps` will run
+      - image: ruby:2.5.3-stretch-node-browsers-legacy # ...with this image as the primary container; this is where all `steps` will run
         environment: # environment variables for primary container
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -41,13 +41,13 @@ jobs: # a collection of steps
           paths:
             - vendor/bundle
 
-      # - add_ssh_keys:
-      #   fingerprints:
-      #     - "be:a4:0f:7e:6f:a6:1a:4b:f4:39:e3:72:96:bd:46:c1"
-      # - deploy:
-      #     name: Capistranoデプロイ
-      #     command:
-      #       bundle exec cap production deploy
+      - add_ssh_keys:
+        fingerprints:
+          - "be:a4:0f:7e:6f:a6:1a:4b:f4:39:e3:72:96:bd:46:c1"
+      - deploy:
+          name: Capistranoデプロイ
+          command:
+            bundle exec cap production deploy
       # Only necessary if app uses webpacker or yarn in some other way
       # - restore_cache:
       #     keys:
