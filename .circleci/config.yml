@@ -43,7 +43,7 @@ jobs: # a collection of steps
 
       - add_ssh_keys:
         fingerprints:
-          - "be:a4:0f:7e:6f:a6:1a:4b:f4:39:e3:72:96:bd:46:c1"
+          - "0b:b9:5a:87:20:ef:6c:f7:61:ac:7e:a1:79:17:77:cc"
       - deploy:
           name: Capistranoデプロイ
           command:
