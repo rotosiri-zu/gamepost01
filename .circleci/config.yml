@@ -41,13 +41,13 @@ jobs: # a collection of steps
           paths:
             - vendor/bundle
 
-      - add_ssh_keys:
-        fingerprints:
-          - "be:a4:0f:7e:6f:a6:1a:4b:f4:39:e3:72:96:bd:46:c1"
-      - deploy:
-          name: Capistranoデプロイ
-          command:
-            bundle exec cap production deploy
+      # - add_ssh_keys:
+      #   fingerprints:
+      #     - "be:a4:0f:7e:6f:a6:1a:4b:f4:39:e3:72:96:bd:46:c1"
+      # - deploy:
+      #     name: Capistranoデプロイ
+      #     command:
+      #       bundle exec cap production deploy
       # Only necessary if app uses webpacker or yarn in some other way
       # - restore_cache:
       #     keys:
