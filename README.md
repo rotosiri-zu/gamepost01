@@ -1,7 +1,9 @@
 【開発】
 タイトル※開発中 ゲームソフト投稿サイト
-URL:　gamepost01-ELB-363962544.ap-northeast-1.elb.amazonaws.com
+
+URL: gamepost01-ELB-363962544.ap-northeast-1.elb.amazonaws.com
 GitURL: https://github.com/rotosiri-zu/gamepost01
+
 ・開発環境
 ・HTML/CSS(SCSS) 
 ・rails 5.2.2
