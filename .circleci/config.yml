@@ -43,9 +43,9 @@ jobs: # a collection of steps
 
       - add_ssh_keys:
         fingerprints:
-          - "0b:b9:5a:87:20:ef:6c:f7:61:ac:7e:a1:79:17:77:cc"
+          - "9f:99:28:2d:ab:dd:e0:68:05:45:05:5d:44:8c:71:80"
       - deploy:
-          name: Capistranoデプロイ
+          name: Capistrano deploy
           command:
             bundle exec cap production deploy
       # Only necessary if app uses webpacker or yarn in some other way
