@@ -1,7 +1,8 @@
 # 開発
 タイトル※開発中 ゲームソフト投稿サイト
 
-URL: http://gamepost01-ELB-363962544.ap-northeast-1.elb.amazonaws.com
+# URL
+ http://gamepost01-ELB-363962544.ap-northeast-1.elb.amazonaws.com
 
 # 開発環境
 - HTML/CSS(SCSS) 
