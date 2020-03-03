@@ -34,8 +34,11 @@ header.header {
     width: 500px;
   }
   .btns {
-      color: white;
-      background-color: blue;
+    height: 26px;
+    width: 66px;
+    color: white;
+    border-radius: 5px;
+    background-color: blue;
   }
 } 
 .user_nav {
