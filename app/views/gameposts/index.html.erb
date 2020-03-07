@@ -4,6 +4,7 @@
       <div class="card">
         <% @games.each do |game| %>
         <div class="box">
+          <% render partial: 'gameposts/product', collection: @games %>
           <a class="links" href="/gameposts/<%= game.id %>"><img class="content_post" src="<%= game.image %>"></a>
             <figcaption><%= simple_format(game.name) %></figcaption>
           </div>
