@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :testsessions, only: :create
+  
   root 'gameposts#index'
   get 'gameposts' =>  'gameposts#index'
   get 'gameposts/new' => 'gameposts#new'
