@@ -12,6 +12,11 @@ class GamepostsController < ApplicationController
   def create
     @games = Game.create(name: game_params[:name], image: game_params[:image], text: 
     game_params[:text], platform: game_params[:platform], genre: game_params[:genre], user_id: current_user.id)
+    if @games.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
