@@ -38,6 +38,11 @@ class GamepostsController < ApplicationController
     @games = Game.find(params[:id])
     if @games.user_id == current_user.id
       @games.update(game_params)
+      if @games.save
+        redirect_to root_path
+      else
+        render :edit
+      end
     end  
   end
 
