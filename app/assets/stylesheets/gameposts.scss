@@ -119,7 +119,6 @@ header.header {
       display: inline-block;
       font-size: 14px;
     }
-  // }
 }
 
 .content {
@@ -412,4 +411,16 @@ padding-left: 10px;
 
 .btn-gray {
   background-color: gray;
+}
+
+// マイページ
+
+.box-h {
+  float: left;
+    margin-left: 80px; 
+    margin-bottom: 50px;
+    height: 120px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    text-align: center;
 }
