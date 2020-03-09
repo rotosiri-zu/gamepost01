@@ -44,7 +44,7 @@ class GamepostsController < ApplicationController
   private
 
   def game_params
-    params.permit(:image, :name, :platform, :genre, :text)
+    params.require(:game).permit(:image, :name, :platform, :genre, :text)
   end
 
   def move_to_index 
