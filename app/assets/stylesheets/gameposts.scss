@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
+// header 
 
 header.header {
   background-color: #00ffcc;
@@ -120,6 +121,8 @@ header.header {
       font-size: 14px;
     }
 }
+
+// main
 
 .content {
   padding: 0;
@@ -245,6 +248,8 @@ header.header {
   border: 2px solid silver;
 }
 
+// sessions
+
 .field {
   height: 100px;
   width: 510px;
@@ -295,6 +300,8 @@ header.header {
 label {
 padding-left: 10px;
 }
+
+//show 
 
 .product-container {
   height: 350px;
