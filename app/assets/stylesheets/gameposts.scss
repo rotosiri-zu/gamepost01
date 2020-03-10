@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
+// header 
 
 header.header {
   background-color: #00ffcc;
@@ -32,13 +33,6 @@ header.header {
     margin-left: 100px;
     height: 21px;
     width: 500px;
-  }
-  .btns {
-    height: 26px;
-    width: 66px;
-    color: white;
-    border-radius: 5px;
-    background-color: blue;
   }
 } 
 .user_nav {
@@ -120,6 +114,24 @@ header.header {
       font-size: 14px;
     }
 }
+  .game_search {
+    height: 0;
+    input {
+      height: 18px;
+      width: 135px;
+      margin-top: 20px;
+      margin-left: 300px;
+    }
+    input.btns {
+      height: 26px;
+      width: 66px;
+      margin-left: 0;
+      color: white;
+      border-radius: 5px;
+      background-color: blue;
+    }
+  }
+// main
 
 .content {
   padding: 0;
@@ -245,6 +257,8 @@ header.header {
   border: 2px solid silver;
 }
 
+// sessions
+
 .field {
   height: 100px;
   width: 510px;
@@ -295,6 +309,8 @@ header.header {
 label {
 padding-left: 10px;
 }
+
+//show 
 
 .product-container {
   height: 350px;
