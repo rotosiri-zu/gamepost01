@@ -34,13 +34,6 @@ header.header {
     height: 21px;
     width: 500px;
   }
-  .btns {
-    height: 26px;
-    width: 66px;
-    color: white;
-    border-radius: 5px;
-    background-color: blue;
-  }
 } 
 .user_nav {
     float: right;
@@ -121,7 +114,23 @@ header.header {
       font-size: 14px;
     }
 }
-
+  .game_search {
+    height: 0;
+    input {
+      height: 18px;
+      width: 135px;
+      margin-top: 20px;
+      margin-left: 300px;
+    }
+    input.btns {
+      height: 26px;
+      width: 66px;
+      margin-left: 0;
+      color: white;
+      border-radius: 5px;
+      background-color: blue;
+    }
+  }
 // main
 
 .content {
