@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root 'gameposts#index'
   resources :users, only: [:show]
   get 'users/users/:id' => 'users#listofposts'
+  resources :reviews, only: [:new, :create]
 end
