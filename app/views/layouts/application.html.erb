@@ -18,8 +18,6 @@
           <%= f.text_field :name_cont ,placeholder: '検索するテキストを入力...' %>
           <%= f.submit ("検索") , class: 'btns'%>
         <% end %>
-        <%# <input type='text' id="keyword" btns placeholder=""> 
-        <button type="button" id="submit" class="btns">検索</button>  %>
           <% if user_signed_in? %>
             <div class="user_nav">
               <span><%= current_user.nickname %>
