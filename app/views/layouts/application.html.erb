@@ -9,15 +9,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="drawer drawer--left">
   <header class="header">
     <div class="header__logo">
-      <h1 class="grid"><a href="/">ゲームソフト投稿サイト</a></h1>
+      <div class="game__logo">
+        <a ></a>
+        <h1 class="grid"><a href="/">ゲームソフト投稿サイト</a></h1>
       <div class="form-group">
         <%= search_form_for @search, url: gameposts_path do |f| %>
           <%= f.text_field :name_cont ,placeholder: '検索するテキストを入力...' %>
           <%= f.submit ("検索") , class: 'btns'%>
         <% end %>
+      </div>  
           <% if user_signed_in? %>
             <div class="user_nav">
               <span><%= current_user.nickname %>
@@ -31,9 +34,11 @@
               <a class="post-h" href="/gameposts/new">投稿する</a>
             </div>
           <% else %>
+          <div class="grid-6">
             <%= link_to "ログイン", new_user_session_path, class: 'post' %>
             <%= link_to "新規登録", new_user_registration_path, class: 'posts' %>
-          <% end %>   
+          <% end %>
+         </div>  
       </div>
       <ul id="list"></ul>
     </div>
