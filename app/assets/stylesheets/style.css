@@ -1,0 +1,18 @@
+/* // 親要素にrelative（定型文句みたいなもの。これを基準に子要素のpositionプロパティをいじるよという印） */
+.wrap {
+  position: relative;
+}
+ 
+/* // メニューdivの初期位置を指定 */
+.wrap .icon_link_tab {
+  position: absolute;
+  top: 0;
+  right: -300px;
+  transition: 0.3s ease-out;
+}
+ 
+/* // バーガーアイコンクリック時の追加CSS */
+.wrap .icon_link_tab.open {
+  right: 0;
+  transition: 0.3s ease-out;
+}
