@@ -202,7 +202,7 @@ header.header {
 .contents-row {
   margin-top: 100px;
   .container {
-    height: 720px;
+    height: 900px;
     width: 100%;
     background: grey;
   }
@@ -235,7 +235,7 @@ header.header {
   }
 
   form  {
-    height: 720px;
+    height: 900px;
     width: 400px;
     margin: 0 auto;
     padding:10px;
@@ -243,7 +243,8 @@ header.header {
     background-color: #fafafa;
     box-sizing: border-box;
     h3 {
-      font-weight: normal;
+      padding-top: 25px;
+      padding-bottom: 25px;
     }
   }
   .img-h {
@@ -255,9 +256,11 @@ header.header {
 
   .img {
     width: 250px;
+    padding-bottom: 10px;
   }
   .name {
     width: 250px;
+    margin-bottom: 10px;
   }
 
   .button_wrapper{
@@ -276,6 +279,83 @@ header.header {
     }
   }
 }
+
+.contents-row-h {
+  margin-top: 100px;
+  .container-h {
+    height: 800px;
+    width: 100%;
+    background: grey;
+  }
+  
+  .success {
+    text-align: center;
+    height:250px;
+    width: 400px;
+    margin: 0 auto;
+    padding:10px;
+    text-align: center;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    border: 2px solid skyblue;
+    h3 {
+      font-weight: normal;
+    }
+    .btn {
+      margin-top: 10px;
+      width: 260px;
+      background-color: skyblue;
+      color: #fff;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+      border: 2px solid skyblue;
+      cursor: pointer;
+    }
+  }
+
+  form  {
+    height: 800px;
+    width: 400px;
+    margin: 0 auto;
+    padding:10px;
+    text-align: center;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    h3 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .img-g {
+    width: 250px;
+    padding-bottom: 10px;
+  }
+  .name-h {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  .button_wrapper-h{
+    text-align: center;
+    .btn-h {
+      margin-top: 10px;
+      width: 260px;
+      background-color: skyblue;
+      color: #fff;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+      border: 2px solid skyblue;
+      cursor: pointer;
+    }
+  }
+}
+
+
 
 .new_user {
   padding-top: 20px;
