@@ -283,7 +283,7 @@ header.header {
 .contents-row-h {
   margin-top: 100px;
   .container-h {
-    height: 800px;
+    height: 900px;
     width: 100%;
     background: grey;
   }
@@ -316,7 +316,7 @@ header.header {
   }
 
   form  {
-    height: 800px;
+    height: 900px;
     width: 400px;
     margin: 0 auto;
     padding:10px;
@@ -355,7 +355,9 @@ header.header {
   }
 }
 
-
+li {
+  color: red;
+}
 
 .new_user {
   padding-top: 20px;
