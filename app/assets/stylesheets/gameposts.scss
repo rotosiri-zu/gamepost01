@@ -56,20 +56,76 @@ header.header {
       position: absolute;
       left: 1000px;
       top: 10px;
-      span {
-        width: 150px;
-        height: 20px;
-        font-size: 1em;
-        cursor: pointer;
+    }
+      #menu {
+        list-style-type: none;
+        width: 250px;
+        margin: 0 auto;
+        padding: 0;
+        background: #276baa;
+      }
+      #menu li{
         position: relative;
-        &:after {
-          content: '▼';
-          font-size: .7em;
-          margin-left: -4px;
-        }
-        &:hover ul {
-          display: block;
-        }
+        width: 45%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: black;
+      }
+      #menu li a{
+        display: block;
+        margin: 0;
+        padding: 13px 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+      }
+      #menu li ul{
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #menu li:last-child ul{
+        left: -100%;
+        width: 100%
+      }
+      #menu li ul li{
+        overflow: hidden;
+        width: 200%;
+        height: 0;
+        color: #fff;
+        -moz-transition: .2s;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        -ms-transition: .2s;
+        transition: .2s;
+      }
+      #menu li ul li a{
+        padding: 13px 15px;
+        background: #1a5293;
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+      }
+      #menu li:hover > a{
+        background: #1a5293;
+        color: #e0dc62;
+      }
+      #menu li:hover ul li{
+        overflow: visible;
+        height: 38px;
+        border-bottom: 1px solid #fff;
+      }
+      #menu li:hover ul li:first-child{
+        border-top: 0;
+      }
+      #menu li:hover ul li:last-child{
+        border-bottom: 0;
       }
       a.post-h {
         width: 120px;
@@ -80,30 +136,7 @@ header.header {
         display: inline-block;
         font-size: 14px;
       }
-      .user__info {
-        padding: 0;
-      }
-      ul {
-        display: none;
-        position: absolute;
-        right: 0;
-        list-style: none;
-        border-left: 1px solid #d8d8d8;
-        border-right: 1px solid #d8d8d8;
-        box-shadow: 1px 2px 5px rgba(0,0,0,0.18);
-        li {
-          background-color: #f0f0f0;
-        }
-        a {
-          display: block;
-          padding: 10px 20px;
-          text-align: left;
-          border-bottom: 1px solid #d8d8d8;
-          text-decoration: none;
-          color: gray;
-        }
-      }
-    }
+
     .grid-6 {
       position: absolute;
       width: 264px;

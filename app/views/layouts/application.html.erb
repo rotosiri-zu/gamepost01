@@ -23,15 +23,14 @@
       </div>  
           <% if user_signed_in? %>
             <div class="user_nav">
-              <span><%= current_user.nickname %>
-                <ul class="user__info">
-                  <li>
-                    <a href="users/<%= current_user.id %>">マイページ</a>
-                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                  </li>
-                </ul>  
-              </span>
-              <a class="post-h" href="/gameposts/new">投稿する</a>
+              <ul id="menu">
+                <li><%= current_user.nickname %>
+                  <ul>
+                    <li><a href="users/<%= current_user.id %>">マイページ</a></li>
+                    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                  </ul>  
+              </ul>
+                <a class="post-h" href="/gameposts/new">投稿する</a>
             </div>
           <% else %>
           <div class="grid-6">
