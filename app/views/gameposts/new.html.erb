@@ -1,6 +1,7 @@
 <div class="contents-row-h">
   <div class="container-h">
-    <%= form_tag('/gameposts',method: :post, multipart: :true) do %>
+     <%= form_for @games, url: gameposts_path do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
       <h3>投稿する</h3>
       <input class="img-g" type="file" name="image">
       <h3 class="game-h">ゲーム名</h3>
