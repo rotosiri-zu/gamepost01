@@ -12,6 +12,8 @@ ja:
         platform: プラットフォーム
         genre: ジャンル
         text: ゲームの説明文
+      review:
+        nickname: ニックネーム
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

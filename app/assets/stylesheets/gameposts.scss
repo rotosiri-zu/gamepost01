@@ -24,7 +24,7 @@ header.header {
     height: 55px;
     .game__logo {
       height: 60px;
-      width: 268px;
+      width: 350px;
       a#nav-hamburger-menu {
         height: 40px;
         margin: 10px 7px 10px 7px;
@@ -452,6 +452,7 @@ li {
 
 label {
 padding-left: 10px;
+padding-right: 10px;
 }
 
 //show 
@@ -584,3 +585,16 @@ padding-left: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.18);
     text-align: center;
 }
+
+// reviews
+
+.review {
+  height: 3500px;
+  width: 1255px;
+  position: absolute;
+  top: 110px
+}
+.new_review {
+  padding-top: 4px;
+}
+
