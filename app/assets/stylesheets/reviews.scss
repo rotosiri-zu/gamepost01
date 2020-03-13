@@ -1,3 +1,40 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review {
+  height: 450px;
+  width: 1252px;
+  position: absolute;
+  top: 110px;
+  margin-left: 29px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  .review-h {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .new_review {
+    padding-top: 4px;
+  }
+  .nickname {
+    padding-bottom: 10px;
+  }
+  .evaluation {
+    padding-bottom: 10px;
+  }
+  .review-text {
+   
+  }
+  .btn.btn--block {
+    height: 35px;
+    width: 312px;
+    margin-top: 10px;
+    background-color: orange;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+}  
+
