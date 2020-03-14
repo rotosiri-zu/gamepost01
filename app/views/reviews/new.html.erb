@@ -1,6 +1,6 @@
 <div class="review">
   <h1 class="review-h">レビュー投稿</h1>
-  <%= form_for [@games,@reviews], url: new_gamepost_review_path do |f| %>
+  <%= form_for [@product,@reviews], url: new_gamepost_review_path do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     <div class="nickname">
       <%= f.label :nickname, style: { 'margin-right' => 10 } %>
