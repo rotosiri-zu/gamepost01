@@ -24,7 +24,7 @@ header.header {
     height: 55px;
     .game__logo {
       height: 60px;
-      width: 268px;
+      width: 350px;
       a#nav-hamburger-menu {
         height: 40px;
         margin: 10px 7px 10px 7px;
@@ -370,12 +370,14 @@ header.header {
     width: 250px;
     margin-bottom: 10px;
   }
-
+  .text-h {
+    width: 251px;
+  }
   .button_wrapper-h{
     text-align: center;
     .btn-h {
       margin-top: 10px;
-      width: 260px;
+      width: 255px;
       background-color: skyblue;
       color: #fff;
       border-radius: 3px;
@@ -452,6 +454,7 @@ li {
 
 label {
 padding-left: 10px;
+padding-right: 10px;
 }
 
 //show 
@@ -584,3 +587,4 @@ padding-left: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.18);
     text-align: center;
 }
+
