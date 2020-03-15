@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   end
   
   def create
-    Review.create(create_params)
+    @product = Review.create(create_params)
     redirect_to controller: :games, action: :index
   end
 
