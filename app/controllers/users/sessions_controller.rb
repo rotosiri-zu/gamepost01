@@ -24,12 +24,5 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
-
-  private
-  def forbid_test_user
-      if @user.email == "test@example.com"
-        flash[:notice] = "テストユーザーのため変更できません"
-        redirect_to root_path
-      end
-  end
+  
 end

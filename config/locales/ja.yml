@@ -3,6 +3,7 @@ ja:
     models:
     attributes:
       user:
+        nickname: ニックネーム
         name: 名前
         email: メールアドレス
       game:
@@ -12,6 +13,9 @@ ja:
         platform: プラットフォーム
         genre: ジャンル
         text: ゲームの説明文
+        create_at: 登録日時
+        update_at: 更新日時
+        user_id: ID
       review:
         nickname: ニックネーム
     errors:

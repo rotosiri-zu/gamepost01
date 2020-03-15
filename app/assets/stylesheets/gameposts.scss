@@ -363,30 +363,34 @@ header.header {
   }
 
   .img-g {
-    width: 250px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 55px;
+    padding-bottom: 20px;
+  }
+  .gamename {
+    padding-bottom: 30px;
   }
   .name-h {
     width: 250px;
     margin-bottom: 10px;
   }
   .text-h {
-    width: 251px;
+    width: 240px;
+    height: 240px;
   }
   .button_wrapper-h{
     text-align: center;
-    .btn-h {
-      margin-top: 10px;
-      width: 255px;
-      background-color: skyblue;
-      color: #fff;
-      border-radius: 3px;
-      font-weight: bold;
-      font-size: 14px;
-      display: inline-block;
-      border: 2px solid skyblue;
-      cursor: pointer;
-    }
+    margin-top: 10px;
+    width: 244px;
+    background-color: skyblue;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid skyblue;
+    cursor: pointer;
   }
 }
 
@@ -575,16 +579,3 @@ padding-right: 10px;
 .btn-gray {
   background-color: gray;
 }
-
-// マイページ
-
-.box-h {
-  float: left;
-    margin-left: 80px; 
-    margin-bottom: 50px;
-    height: 120px;
-    width: 250px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-    text-align: center;
-}
-

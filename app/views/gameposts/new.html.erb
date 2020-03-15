@@ -1,18 +1,21 @@
 <div class="contents-row-h">
   <div class="container-h">
-     <%= form_for @games, url: gameposts_path do |f| %>
-      <%= render 'layouts/error_messages', model: f.object %>
-      <h3>投稿する</h3>
-      <input class="img-g" type="file" name="image">
-      <h3 class="game-h">ゲーム名</h3>
-      <input class="name-h" placeholder="ゲーム名" type="text" name="name">
-      <h3>プラットフォーム</h3>
-       <input class="name-h" placeholder="プラットフォーム" type="text" name="platform">
-       <h3>ジャンル</h3>
-       <input class="name-h" placeholder="ジャンル" type="text" name="genre">
-       <h3>ゲームの説明文</h3>
-       <textarea class="text-h" placeholder="ゲームの説明文を入力してください。168文字まで" name="text" cols="21" rows="8"></textarea>
-      <div class="button_wrapper-h"><input class="btn-h" type="submit" value="投稿する"></div>
-      <% end %>
+    <%= form_for @games, url: gameposts_path, method: :post, multipart: :true do |f| %>
+    <h3>投稿する</h3>
+    <%= f.file_field :image_file, class:'img-g'%>
+
+    <h3 class="game">ゲーム名</h3>
+    <%= f.text_field :name, class:'name-h', placeholder: 'ゲーム名' %>
+  
+    <h3>platform</h3>
+    <%= f.text_field :platform, class:'name-h', placeholder: 'platform' %>
+
+    <h3>genre</h3>
+    <%= f.text_field :genre, class:'name-h', placeholder: 'genre' %>
+
+    <h3>ゲームの説明文</h3>
+    <%= f.text_area :text, class: 'text-h', placeholder: 'ゲームの説明文を入力してください。' %>
+    <%= f.submit '投稿', class: 'button_wrapper-h' %>
+    <% end %>
   </div>
 </div>
