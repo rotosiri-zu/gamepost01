@@ -80,4 +80,4 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'jquery-rails'
 gem 'ransack'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'

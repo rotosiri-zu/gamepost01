@@ -1,16 +1,17 @@
 <div class="contents-row-h">
   <div class="container-h">
-    <%= form_for @games, url: gameposts_path, method: :post, multipart: :true do |f| %>
+    <%= form_for @games, url: gameposts_path, method: :post, remote: true do |f| %>
     <h3>投稿する</h3>
+    <% f.label :image ,'画像ファイル' %>
     <%= f.file_field :image_file, class:'img-g'%>
 
     <h3 class="game">ゲーム名</h3>
     <%= f.text_field :name, class:'name-h', placeholder: 'ゲーム名' %>
   
-    <h3>platform</h3>
+    <h3>プラットフォーム</h3>
     <%= f.text_field :platform, class:'name-h', placeholder: 'platform' %>
 
-    <h3>genre</h3>
+    <h3>ジャンル</h3>
     <%= f.text_field :genre, class:'name-h', placeholder: 'genre' %>
 
     <h3>ゲームの説明文</h3>

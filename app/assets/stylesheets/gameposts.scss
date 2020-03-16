@@ -235,7 +235,7 @@ header.header {
 .contents-row {
   margin-top: 100px;
   .container {
-    height: 900px;
+    height: 960px;
     width: 100%;
     background: grey;
   }
@@ -268,7 +268,7 @@ header.header {
   }
 
   form  {
-    height: 900px;
+    height: 960px;
     width: 400px;
     margin: 0 auto;
     padding:10px;
@@ -295,12 +295,15 @@ header.header {
     width: 250px;
     margin-bottom: 10px;
   }
-
+  .text {
+    width: 250px;
+    height: 240px;
+  }
   .button_wrapper{
     text-align: center;
     .btn {
       margin-top: 10px;
-      width: 260px;
+      width: 253px;
       background-color: skyblue;
       color: #fff;
       border-radius: 3px;
@@ -332,6 +335,8 @@ header.header {
     box-sizing: border-box;
     border: 2px solid skyblue;
     h3 {
+      padding-top: 20px;
+      padding-bottom: 20px;
       font-weight: normal;
     }
     .btn {
@@ -376,13 +381,13 @@ header.header {
     margin-bottom: 10px;
   }
   .text-h {
-    width: 240px;
+    width: 250px;
     height: 240px;
   }
   .button_wrapper-h{
     text-align: center;
     margin-top: 10px;
-    width: 244px;
+    width: 253px;
     background-color: skyblue;
     color: #fff;
     border-radius: 3px;
