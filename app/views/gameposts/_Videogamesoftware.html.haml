@@ -10,7 +10,7 @@
           .box
             %a.links{:href => "/gameposts/#{game.id}"}
               %img.content_post{:src => "#{game.image}"}/
-            %figcaption= simple_format(game.name)
+            %p.name-g= (game.name)
       %div
       %footer
         = paginate(@games)
