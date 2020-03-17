@@ -1,0 +1,12 @@
+%main.content
+  .top-content
+    .content-box
+      .card
+        - @games.each do |game|
+          .box
+            %a.links{:href => "/gameposts/#{game.id}"}
+              %img.content_post{:src => "#{game.image}"}/
+            %figcaption= simple_format(game.name)
+      %div
+      %footer
+        = paginate(@games)

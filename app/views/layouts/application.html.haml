@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Gamepost
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header.header
+    .header__logo
+      .game__logo
+        %a.hamburger-menu
+        %h1.grid
+          %a{:href => "/"} ゲームソフト投稿サイト
+        .form-group
+          = search_form_for @search, url: gameposts_path do |f|
+            = f.text_field :name_cont ,placeholder: '検索するテキストを入力...'
+            = f.submit ("検索") , class: 'btns'
+        - if user_signed_in?
+          .user_nav
+            %ul#menu
+              %li
+                = current_user.nickname
+                %ul
+                  %li
+                    %a{:href => "users/#{current_user.id}"} マイページ
+                  %li= link_to "ログアウト", destroy_user_session_path, method: :delete
+            %a.post-h{:href => "/gameposts/new"} 投稿する
+        - else
+          .grid-6
+            = link_to "ログイン", new_user_session_path, class: 'post'
+            = link_to "新規登録", new_user_registration_path, class: 'posts'
+      %ul#list
+  = yield
