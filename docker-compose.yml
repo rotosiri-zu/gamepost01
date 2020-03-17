@@ -1,33 +1,43 @@
-version: '2'
+version: '3'
 services:
   db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
-    ports:
-      - "3306:3306"
-
-  web:
-    build: .
-    command: bundle exec puma -C /sagittarius/config/puma.rb
+    image: mysql:5.7.28
     volumes:
-      - .:/sagittarius
-    ports:
-      - "3000:3000"
-    links:
-      - db
-
-    # environment:
-    #   RAILS_ENV: 'production'
+      - mysql_data:/var/lib/mysql
     environment:
-      - RAILS_SYSTEM_TESTING_SCREENSHOT=inline
+      MYSQL_DATABASE: mewblr_development
+      MYSQL_ROOT_PASSWORD: password
     tty: true
-  nginx:
-    build: containers/nginx
     ports:
-      - "80:80"
-    volumes_from:
-      - web
+      - 3306:3306
+  
+  rails:
+    build:
+      context: .
+    volumes:
+      - .:/gamepost01
+      - public-data:/gamepost01/public
+      - tmp-data:/gamepost01/tmp
+      - log-data:/gamepost01/log
+    environment:
+      RAILS_ENV: development
     depends_on:
-      - web
+      - db
+    command: sh scripts/launch.sh
+    ports:
+      - 3000:3000
+  nginx:
+    build: 
+      context: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - rails
+    volumes:
+      - public-data:/gamepost01/public
+      - tmp-data:/gamepost01/tmp
+volumes:
+  public-data:
+  tmp-data:
+  log-data:
+  mysql_data:
