@@ -1,5 +1,5 @@
 class GamepostsController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
   
   def index
     @games = Game.all
@@ -38,6 +38,11 @@ class GamepostsController < ApplicationController
     @games = Game.find(params[:id])
     if @games.user_id == current_user.id
       @games.update(set_game)
+      if @games.save
+        redirect_to root_path
+      else
+        render :edit
+      end
     end  
   end
 

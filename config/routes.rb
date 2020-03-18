@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'gameposts/:id/destroy' => 'gameposts#destroy'
   resources :users
   root to: 'gameposts#index'
+  get 'users/users/:id' => 'users#listofposts'
 end

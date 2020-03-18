@@ -302,6 +302,42 @@ header.header {
     text-align: center;
     .btn {
       margin-top: 10px;
+      width: 260px;
+      background-color: skyblue;
+      color: #fff;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+      border: 2px solid skyblue;
+      cursor: pointer;
+    }
+  }
+}
+
+.contents-row-h {
+  margin-top: 100px;
+  .container-h {
+    height: 900px;
+    width: 100%;
+    background: grey;
+  }
+  
+  .success {
+    text-align: center;
+    height:250px;
+    width: 400px;
+    margin: 0 auto;
+    padding:10px;
+    text-align: center;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    border: 2px solid skyblue;
+    h3 {
+      font-weight: normal;
+    }
+    .btn {
+      margin-top: 10px;
       width: 253px;
       background-color: skyblue;
       color: #fff;
