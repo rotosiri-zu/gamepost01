@@ -15,6 +15,6 @@ class ApplicationController < ActionController::Base
 
     def set_search
       @search = Game.ransack(params[:q])
-      @search_products = @search.result.page(params[:page])
+      @search_products = @search.result.page(params[:page]).order("created_at DESC")
     end
 end
