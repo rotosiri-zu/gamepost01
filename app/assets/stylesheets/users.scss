@@ -1,3 +1,15 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// マイページ
+
+.box-h {
+  float: left;
+    margin-left: 80px; 
+    margin-bottom: 50px;
+    height: 120px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    text-align: center;
+}

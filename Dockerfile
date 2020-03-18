@@ -1,28 +1,22 @@
-FROM ruby:2.5.3-alpine3.8
+FROM ruby:2.5.3-alpine
 
-ENV RUNTIME_PACKAGES="linux-headers libxml2-dev make gcc libc-dev nodejs tzdata mysql-client mysql-dev yarn vim" \
-    CHROME_PACKAGES="chromium-chromedriver zlib-dev chromium xvfb wait4ports xorg-server dbus ttf-freefont mesa-dri-swrast udev" \
-    BUILD_PACKAGES="build-base curl-dev" \
-    LANG=C.UTF-8 \
-    TZ=Asia/Tokyo
+WORKDIR /gamepost01
 
-RUN apk update && \
-    apk upgrade && \
-    apk add --no-cache ${RUNTIME_PACKAGES} && \
-    apk add --no-cache ${CHROME_PACKAGES} && \
-    apk add --virtual build-packages --no-cache ${BUILD_PACKAGES} && \
-    apk del build-packages
+RUN apk add git --no-cache
+RUN apk add --update bash perl --no-cache
+RUN apk add libxslt-dev libxml2-dev build-base --no-cache
+RUN apk add mysql-client mysql-dev --no-cache
+RUN apk add --no-cache file
+RUN apk add yarn --no-cache
+RUN apk add tzdata --no-cache
+RUN apk --update add imagemagick --no-cache
 
-RUN mkdir /sagittarius
-ENV APP_ROOT /sagittarius
-WORKDIR $APP_ROOT
-
-ADD ./Gemfile $APP_ROOT/Gemfile
-ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
+COPY . /gamepost01
 
 RUN bundle install
-ADD . $APP_ROOT
-RUN mkdir -p tmp/sockets
+RUN yarn install
 
-VOLUME $APP_ROOT/public
-VOLUME $APP_ROOT/tmp
+RUN mkdir -p /gamepost01/tmp/sockets /gamepost01/tmp/pids
+
+RUN mkdir -p /tmp/public && \
+    cp -rf /gamepost01/public/* /tmp/public
