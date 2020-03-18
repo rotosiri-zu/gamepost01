@@ -1,0 +1,11 @@
+%main.content
+  .top-content
+    .content-box
+      .card
+        - @search_products.each do |game|
+          .box
+            %a.links{:href => "/gameposts/#{game.id}"}
+              %img.content_post{:src => "#{game.image}"}/
+            %p.name-g= (game.name)
+      %div
+      
