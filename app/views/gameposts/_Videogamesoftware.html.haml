@@ -1,0 +1,16 @@
+%main.content
+  .top-content
+    .content-box
+      .card
+        - if @search_products
+          - render partial: 'gameposts/games', collection: @search_products
+        - else
+          - render partial: 'gameposts/games', collection: @games
+        - @games.each do |game|
+          .box
+            %a.links{:href => "/gameposts/#{game.id}"}
+              %img.content_post{:src => "#{game.image}"}/
+            %p.name-g= (game.name)
+      %div
+      %footer
+        = paginate(@games)

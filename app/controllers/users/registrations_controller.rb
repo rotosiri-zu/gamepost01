@@ -59,6 +59,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  
   private
   def forbid_test_user
       if @user.email == "test@example.com"

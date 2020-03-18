@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
     before_action :set_current_user
     before_action :set_search
-    
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
     end
@@ -15,6 +14,6 @@ class ApplicationController < ActionController::Base
     
     def set_search
       @search = Game.ransack(params[:q])
-      @search_products = @search.result.page(params[:page])
+      @search_products = @search.result.page(params[:page]).order("created_at DESC")
     end
 end

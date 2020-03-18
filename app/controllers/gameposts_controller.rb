@@ -11,8 +11,7 @@ class GamepostsController < ApplicationController
   end
 
   def create
-    @games = Game.create(name: game_params[:name], image: game_params[:image], text: 
-    game_params[:text], platform: game_params[:platform], genre: game_params[:genre], user_id: current_user.id)
+    @games = Game.create(game_params)
     if @games.save
       redirect_to root_path
     else
@@ -38,7 +37,7 @@ class GamepostsController < ApplicationController
   def update
     @games = Game.find(params[:id])
     if @games.user_id == current_user.id
-      @games.update(game_params)
+      @games.update(set_game)
       if @games.save
         redirect_to root_path
       else
@@ -50,6 +49,10 @@ class GamepostsController < ApplicationController
   private
 
   def game_params
+    params.require(:game).permit(:image, :name, :platform, :genre, :text).merge(user_id: current_user.id)
+  end
+
+  def set_game
     params.permit(:image, :name, :platform, :genre, :text)
   end
 
