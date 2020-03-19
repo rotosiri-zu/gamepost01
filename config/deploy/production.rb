@@ -62,7 +62,7 @@
 
 set :branch, 'master'
 
-server '18.180.63.130',
+server '18.178.189.107',
   user: 'hiroki',
   roles: %w[web app db],
   port: 22,
