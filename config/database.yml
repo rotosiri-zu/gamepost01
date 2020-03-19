@@ -55,4 +55,4 @@ production:
   <<: *default
   database: gamepost01_production
   username: gamepost
-  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['GAMEPOST_DATABASE_PASSWORD'] %>
