@@ -23,7 +23,7 @@ services:
       RAILS_ENV: development
     depends_on:
       - db
-    command: sh scripts/launch.sh
+    command: bundle exec puma -C config/puma.rb
     ports:
       - 3000:3000
   nginx:
