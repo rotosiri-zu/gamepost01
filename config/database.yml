@@ -53,11 +53,6 @@ test:
 #
 production:
   <<: *default
-  adapter: mysql2
-  encoding: utf8
-  pool: 3306
-  database: gamepost01__production
-  username: admin
-  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
-  host: gamepost01-mysql.c2xmcdfxjbzb.ap-northeast-1.rds.amazonaws.com
- 
+  database: gamepost01_production
+  username: gamepost
+  password: <%= ENV['GAMEPOST_DATABASE_PASSWORD'] %>
