@@ -5,7 +5,7 @@ set :application, "gamepost01"
 set :repo_url, "git@github.com:rotosiri-zu/gameplost01.git"
 set :user, "hiroki"
 
-set :deploy_to, "/home/hiroki/gamepost01"
+set :deploy_to, "/home/hiroki/var/www/gamepost01"
 
 set :format, :airbrussh
 set :format_options, command_output: true, log_file: "log/capistrano.log", color: :true, truncate: :false
