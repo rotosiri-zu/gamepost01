@@ -10,6 +10,7 @@ RUN apk add --no-cache file
 RUN apk add yarn --no-cache
 RUN apk add tzdata --no-cache
 RUN apk --update add imagemagick --no-cache
+RUN apk add vim
 
 COPY . /gamepost01
 
