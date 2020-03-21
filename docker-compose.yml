@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: ${RAILS_DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${RAILS_DATABASE_USER}
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    command: bundle exec puma -C config/puma.rb
+    volumes:
+      - .:/app_name
+      - public-data:/app_name/public
+      - tmp-data:/app_name/tmp
+      - log-data:/app_name/log
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+
+    nginx:
+      build:
+        context: containers/nginx
+      volumes:
+        - public-data:/app/public
+        - tmp-data:/app/tmp
+      ports:
+        - 80:80
+      depends_on:
+        - web
+volumes:
+  public-data:
+  tmp-data:
+  log-data:
+  db-data:
