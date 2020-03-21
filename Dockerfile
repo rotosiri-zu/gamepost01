@@ -1,30 +1,11 @@
-FROM ruby:2.5.3-alpine
+FROM ruby:2.5.3
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apt-get update -qq && \
     apt-get install -y build-essential \ 
                        libpq-dev \        
                        nodejs \
-                       vim \
-                       git \ 
-                       make \ 
-                       gcc-c++ \ 
-                       patch \ 
-                       libyaml-devel \ 
-                       libffi-devel \ 
-                       libicu-devel \ 
-                       zlib-devel \ 
-                       readline-devel \ 
-                       libxml2-devel \ 
-                       libxslt-devel \ 
-                       ImageMagick \ 
-                       ImageMagick-devel \ 
-                       openssl-devel \
-                       libcurl \
-                       libcurl-devel \ 
-                       curl \
-                       mysql-client \
-                       mysql-dev
+                       vim  
 
 # 作業ディレクトリの作成、設定
 RUN mkdir /app_name 
@@ -40,6 +21,3 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 RUN bundle install
 ADD . $APP_ROOT
 RUN mkdir -p tmp/sockets
-
-VOLUME $APP_ROOT/public
-VOLUME $APP_ROOT/tmp
