@@ -82,7 +82,6 @@ gem 'fog-aws'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
-gem 'ransack'
 gem 'jquery-rails'
 gem 'ransack'
 gem "font-awesome-rails"
