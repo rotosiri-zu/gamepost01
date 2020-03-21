@@ -13,17 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV['RAILS_DATABASE_USER'] %>
+  username: root
   password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
   host: db
-  Docker 
 
 development:
   <<: *default
   database: gamepost01__development
-  username: <%= ENV['RAILS_DATABASE_USER'] %>
-  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
-  host: db
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -53,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: gamepost01_production
-  username: gamepost
-  password: <%= ENV['GAMEPOST_DATABASE_PASSWORD'] %>
+  host: <%= Rails.application.credentials.rds[:host] %>
+  database: <%= Rails.application.credentials.rds[:database] %>
+  username: <%= Rails.application.credentials.rds[:username] %>
+  password: <%= Rails.application.credentials.rds[:password] %>
