@@ -53,6 +53,7 @@ test:
 production:
   <<: *default
   database: gamepost01__production
-  username: <%= Rails.application.credentials.rds[:username] %>
-  password: <%= Rails.application.credentials.rds[:password] %>
-  host: <%= Rails.application.credentials.rds[:host] %>
+  username: gamepost01
+  password: <%= ENV['GAMEPOST01_DATABASE_PASSWORD'] %>
+
+  
