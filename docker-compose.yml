@@ -5,7 +5,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${RAILS_DATABASE_PASSWORD}
       MYSQL_USER: ${RAILS_DATABASE_USER}
-      MYSQL_DATABASE: gamepost01_development
     volumes:
       - db-data:/var/lib/mysql
     ports:
