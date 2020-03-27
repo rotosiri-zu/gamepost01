@@ -3,4 +3,5 @@ class Game < ApplicationRecord
   belongs_to :user
   has_many :review
   validates :image, :name, :platform, :genre, :text, presence: true
+  validates :user_id, presence: true
 end
