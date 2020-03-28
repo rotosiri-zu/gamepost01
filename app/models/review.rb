@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :game
-  belongs_to :user
+  has_many :game
+  has_many :user
   validates :nickname, :rate, :review, presence: true
 end
