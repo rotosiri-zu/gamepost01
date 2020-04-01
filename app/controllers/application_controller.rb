@@ -6,8 +6,11 @@ class ApplicationController < ActionController::Base
     before_action :set_current_user
     before_action :set_search
     
+    private
+
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+      devise_parameter_sanitizer.permit(:sign_in, keys: [:nickname])
     end
 
     def set_current_user
