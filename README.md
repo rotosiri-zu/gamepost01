@@ -7,7 +7,7 @@
 # 【使用言語、フレームワーク】
 - HTML/CSS(SCSS) 
 - rails 5.2.2
-- ruby 2.5.3
+- ruby 2.6.5
 - AWS(VPC, EC2, IAM, S3, ALB)
 - docker
 - GitHub
