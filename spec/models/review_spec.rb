@@ -32,6 +32,6 @@ RSpec.describe Review, type: :model do
   it 'product_idが空の場合登録できない' do
     review = build(:review, product_id: nil)
     review.valid?
-    expect(review.errors).to  be_added(:product_id, :blank)
+    expect(review.errors).to be_added(:product_id, :blank)
   end
 end
