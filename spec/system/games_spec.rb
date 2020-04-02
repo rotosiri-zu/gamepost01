@@ -5,7 +5,7 @@ RSpec.describe "games", type: :system do
   let(:user_b) { create(:user, nickname: 'ユーザーB', email: 'b@example.com') }
  
   shared_examples_for 'ユーザーAが作成したゲームソフトの一覧が表示される' do
-    it { expect(page).to have_content 'spec/fixtures/sky-1253086_1280.jpg, ゲームA' }
+    it { expect(page).to have_content 'spec/fixtures/618YoWFaSiL.jpg, ゲームA' }
   end
 
   describe '一覧表示機能' do
@@ -22,7 +22,7 @@ RSpec.describe "games", type: :system do
       end
       it '新規投稿' do
         click_link '投稿'
-        expect(current_path).to eq(new_gamepost_path)
+        visit new_gamepost_path
       end  
     end
 
