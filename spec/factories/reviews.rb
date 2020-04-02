@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :review do
+    id                                 {1}
     nickname                           {"テスト"}
     rate                               {1}
     review                             {"テスト"}
