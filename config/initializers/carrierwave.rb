@@ -2,8 +2,8 @@ require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
-CarrierWave.configure do |config|
-  if Rails.env.production?
+if Rails.env.production?
+  CarrierWave.configure do |config|
     config.storage = :fog
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
@@ -12,10 +12,8 @@ CarrierWave.configure do |config|
       aws_secret_access_key: Rails.application.credentials.dig(:aws, :secret_access_key),
       region: 'ap-northeast-1'
     }
+
     config.fog_directory  = 'railspoto'
     config.asset_host = 'https://railspoto.s3.amazonaws.com'
-  else
-    config.storage :file # 開発環境:public/uploades下に保存
-    config.enable_processing = false if Rails.env.test? #test:処理をスキップ
-  end  
+  end
 end

@@ -1,9 +1,9 @@
 class GamepostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
-  
+  before_action :move_to_index, except: %i[index show]
+
   def index
     @games = Game.all
-    @games = Game.order("created_at DESC").page(params[:page]).per(50)
+    @games = Game.order('created_at DESC').page(params[:page]).per(50)
   end
 
   def new
@@ -25,9 +25,7 @@ class GamepostsController < ApplicationController
 
   def destroy
     @games = Game.find(params[:id])
-    if @games.user_id == current_user.id
-      @games.destroy
-    end  
+    @games.destroy if @games.user_id == current_user.id
   end
 
   def edit
@@ -43,7 +41,7 @@ class GamepostsController < ApplicationController
       else
         render :edit
       end
-    end  
+    end
   end
 
   private
@@ -56,8 +54,8 @@ class GamepostsController < ApplicationController
     params.permit(:image, :name, :platform, :genre, :text)
   end
 
-  def move_to_index 
+  def move_to_index
     redirect_to action: :index unless
     user_signed_in?
-  end 
+  end
 end
