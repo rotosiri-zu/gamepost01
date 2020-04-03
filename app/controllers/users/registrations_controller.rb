@@ -59,12 +59,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-  
+
   private
+
   def forbid_test_user
-      if @user.email == "test@example.com"
-        flash[:notice] = "テストユーザーのため変更できません"
-        redirect_to root_path
-      end
+    if @user.email == 'test@example.com'
+      flash[:notice] = 'テストユーザーのため変更できません'
+      redirect_to root_path
+    end
   end
 end
