@@ -12,6 +12,8 @@ services:
 
   web:
     build: .
+    environment:
+      RAILS_ENV: production
     command: bundle exec puma -C /app_name/config/puma.rb
     volumes:
       - .:/app_name
