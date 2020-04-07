@@ -75,6 +75,6 @@ gem 'ransack'
 gem 'carrierwave'
 gem 'fog-aws'
 
-group :production do
+group :production, :staging do
   gem 'unicorn'
 end
