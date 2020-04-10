@@ -12,8 +12,6 @@ services:
 
   web:
     build: .
-    # environment:
-    #   RAILS_ENV: production
     command: bundle exec puma -C /app_name/config/puma.rb
     volumes:
       - .:/app_name
@@ -22,7 +20,7 @@ services:
       - log-data:/app_name/log
     ports:
       - "3000:3000"
-    depends_on:
+    links:
       - db
     tty: true
     stdin_open: true
@@ -41,4 +39,3 @@ volumes:
   tmp-data:
   log-data:
   db-data:
-
