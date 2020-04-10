@@ -36,9 +36,9 @@ services:
       - "80:80"
     depends_on:
       - web
-      
 volumes:
   public-data:
   tmp-data:
   log-data:
   db-data:
+

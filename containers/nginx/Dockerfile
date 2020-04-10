@@ -1,5 +1,6 @@
 FROM nginx:1.17.5
 
+
 # インクルード用のディレクトリ内を削除
 RUN rm -f /etc/nginx/conf.d/*
 
