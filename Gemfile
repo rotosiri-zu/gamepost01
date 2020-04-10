@@ -74,3 +74,7 @@ gem 'rails-i18n'
 gem 'ransack'
 gem 'carrierwave'
 gem 'fog-aws'
+
+group :production, :staging do
+    gem 'unicorn'
+end
