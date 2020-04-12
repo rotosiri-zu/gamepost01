@@ -10,7 +10,7 @@
       %input.name{:name => "platform", :placeholder => "platform", :type => "text", :value => "#{@games.platform}"}/
       %h3 genre
       %input.name{:name => "genre", :placeholder => "genre", :type => "text", :value => "#{@games.genre}"}/
-      %h3 ゲームの説明文
-      %textarea.text{:cols => "21", :name => "text", :placeholder => "ゲームの説明文を入力してください。168文字まで", :rows => "8"}= @games.text
+      %h3{:wrap => 'hard'} ゲームの説明文
+      %textarea.text{:cols => "21", :name => "text", :placeholder => "ゲームの説明文を入力してください。168文字まで", :wrap => 'hard'}= @games.text
       .button_wrapper
         %input.btn{:type => "submit", :value => "変更する"}/

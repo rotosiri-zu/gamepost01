@@ -12,5 +12,5 @@
       %h3 ジャンル
       = f.text_field :genre, class:'name-h', placeholder: 'genre'
       %h3 ゲームの説明文
-      = f.text_area :text, class: 'text-h', placeholder: 'ゲームの説明文を入力してください。'
+      = f.text_area :text, class: 'text-h', placeholder: 'ゲームの説明文を入力してください。', wrap: 'hard'
       = f.submit '投稿', class: 'button_wrapper-h'
