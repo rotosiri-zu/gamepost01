@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
   end
 
   private
+
   def create_params
     params.require(:review).permit(:nickname, :rate, :review).merge(product_id: params[:product_id])
   end
