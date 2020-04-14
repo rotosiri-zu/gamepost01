@@ -1,6 +1,6 @@
 .review
   %h1.review-h レビュー投稿
-  = form_for [@product,@reviews], url: new_gamepost_review_path do |f|
+  = form_for [@product,@reviews], url: gamepost_reviews_path do |f|
     = render 'layouts/error_messages', model: f.object
     .nickname
       = f.label :nickname, style: { 'margin-right' => 10 }
@@ -8,6 +8,9 @@
     .evaluation
       = f.label :評価, style: { 'margin-right' => 8 }, value: '評価5段階'
       = f.number_field :rate, placeholder: '評価', value: 1, max: 5, min: 1, html: { class: "search__query", style: 'text-align: right;' }
+    .title
+      = f.label :title, style: { 'margin-right' => 10 }
+      = f.text_field :title, placeholder: 'タイトル', value: ''
     .review-text
       = f.text_area :review, placeholder: 'ゲームの感想をお書き下さい。', style: 'width: 25%; height: 150px; border: 2px solid skyblue;'
     .row

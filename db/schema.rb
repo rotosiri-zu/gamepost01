@@ -24,12 +24,15 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname"
+    t.string "nickname", null: false
+    t.string "title", null: false
     t.integer "rate"
-    t.text "review"
-    t.integer "product_id"
+    t.text "review", null: false
+    t.integer "user_id"
+    t.bigint "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_reviews_on_game_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -45,4 +48,5 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "reviews", "games"
 end

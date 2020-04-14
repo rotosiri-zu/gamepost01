@@ -23,3 +23,11 @@
       %a.btn-default.btn-red{:href => "#{@games.id}/edit"} 編集
     %button.btn-default.btn-gray
       %a{:href => "#{@games.id}/destroy"} 削除
+.content-box3
+  %h4 レビュー一覧
+  .h-row
+    - if @reviews
+      - @reviews.each do |review|
+        .review-content
+          %p
+            = review.nickname

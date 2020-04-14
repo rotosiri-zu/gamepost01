@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .review {
-  height: 450px;
+  height: 650px;
   width: 1252px;
   position: absolute;
   top: 110px;
@@ -24,6 +24,9 @@
     padding-bottom: 10px;
   }
   .evaluation {
+    padding-bottom: 10px;
+  }
+  .title {
     padding-bottom: 10px;
   }
   .btn.btn--block {

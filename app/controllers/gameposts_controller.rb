@@ -21,6 +21,8 @@ class GamepostsController < ApplicationController
 
   def show
     @games = Game.find(params[:id])
+    @reviews = Game.where(params[:id])
+    @reviews = Review.order('created_at DESC').limit(10)
   end
 
   def destroy
