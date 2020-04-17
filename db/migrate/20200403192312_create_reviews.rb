@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :rate
       t.text :review, null: false
       t.integer :user_id
-      t.references :game, foreign_key: true
+      t.integer :gamepost_id
       t.timestamps
     end
   end
