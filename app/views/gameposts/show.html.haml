@@ -46,4 +46,8 @@
               });
             %span.h-letter-space
               = review.title
-            %a
+            %p
+              = review.created_at.to_s(:datetime_jp)
+          .reviewtext
+            %span
+              = review.review
