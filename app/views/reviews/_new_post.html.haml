@@ -1,6 +1,6 @@
 .review
   %h1.review-h レビュー投稿
-  = form_for [@reviews], url: gamepost_reviews_path do |f|
+  = form_with(model: [@games, @review], local: true) do |f|
     = render 'layouts/error_messages', model: f.object
     .nickname
       = f.label :nickname, style: { 'margin-right' => 10 }
@@ -18,3 +18,4 @@
         = button_tag type: "submit", class: "btn btn--block" do
           投稿する
           %i.fa.fa-arrow-right
+          

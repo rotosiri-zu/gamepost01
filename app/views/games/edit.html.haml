@@ -1,6 +1,6 @@
 .contents-row
   .container
-    = form_tag("/gameposts/#{@games.id}",method: :patch, multipart: :true) do
+    = form_tag("/games/#{@games.id}",method: :patch, multipart: :true) do
       %h3 投稿する
       %img.img-h{:src => "#{@games.image}"}/
       %input.img{:name => "image", :type => "file"}/

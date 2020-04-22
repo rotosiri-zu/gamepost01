@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :game
-  has_many :review
+  has_many :reviews
   validates :nickname, :email, :password, :password_confirmation, presence: true
 end

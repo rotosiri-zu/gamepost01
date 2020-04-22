@@ -5,7 +5,7 @@
       %h1.grid
         %a{:href => "/"} ゲームソフト投稿サイト
       .form-group
-        = search_form_for @search, url: gameposts_path do |f|
+        = search_form_for @search, url: games_path do |f|
           = f.text_field :name_cont ,placeholder: '検索するテキストを入力...'
           = f.submit ("検索") , class: 'btns'
       - if user_signed_in?
@@ -17,9 +17,10 @@
                 %li
                   %a{:href => "users/#{current_user.id}"} マイページ
                 %li= link_to "ログアウト", destroy_user_session_path, method: :delete
-          %a.post-h{:href => "/gameposts/new"} 投稿する
+          %a.post-h{:href => "/games/new"} 投稿する
       - else
         .grid-6
           = link_to "ログイン", new_user_session_path, class: 'post'
           = link_to "新規登録", new_user_registration_path, class: 'posts'
-    %ul#list
+.header.container
+  = render partial: 'shared/flash'

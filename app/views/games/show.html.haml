@@ -1,0 +1,27 @@
+%section.product-container
+  .container-box
+    %h1.item-name
+      = @games.name
+    .item-container
+      %table.item-table
+        %tbody
+          %tr
+            %th プラットフォーム
+            %td= @games.platform
+          %tr
+            %th ジャンル
+            %td= @games.genre
+          %tr
+            %th.game-text ゲームの説明文
+            %td.text-description= @games.text
+      .item-imges
+        %img.content_post{:src => "#{@games.image}"}
+
+- if user_signed_in? && current_user.id == @games.user_id
+  .container-box2
+    .item-box
+      %a.btn-default.btn-red{:href => "#{@games.id}/edit"} 編集
+    %button.btn-default.btn-gray
+      %a{:href => "#{@games.id}/destroy"} 削除
+  = render 'reviews/new_post'
+= render 'reviews/posts'

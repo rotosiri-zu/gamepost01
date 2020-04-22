@@ -1,4 +1,4 @@
-// Place all the styles related to the gameposts controller here.
+// Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -504,21 +504,6 @@ padding-right: 10px;
         color: both;
         display: inline-block;
       } 
-    }
-    .reviewpostingscreen {
-      position: absolute;
-      top: 555px;
-      right: 360px;
-      width: 260px;
-      background-color: green;
-      color: #fff;
-      border-radius: 3px;
-      font-weight: bold;
-      font-size: 14px;
-      display: inline-block;
-      border: 2px solid green;
-      cursor: pointer;
-      text-align: center;
     }
     .item-table {
       max-width: 300px;
