@@ -1,6 +1,6 @@
 .contents-row-h
   .container-h
-    = form_for @games, url: gameposts_path, method: :post, remote: false do |f|
+    = form_for @games, url: games_path, method: :post, remote: false do |f|
       = render 'layouts/error_messages', model: f.object
       %h3 投稿する
       = f.label :image, '画像ファイル'

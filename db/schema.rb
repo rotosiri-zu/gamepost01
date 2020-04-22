@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
     t.integer "rate"
     t.text "review", null: false
     t.integer "user_id"
-    t.integer "gamepost_id"
+    t.integer "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

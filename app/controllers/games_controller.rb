@@ -1,9 +1,11 @@
-class GamepostsController < ApplicationController
-  before_action :move_to_index, except: %i[index show]
+class GamesController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
+  before_action :set_search
+  before_action :set_game, only: %i[show destroy edit update]
 
   def index
     @games = Game.all
-    @games = Game.order('created_at DESC').page(params[:page]).per(50)
+    @games = Game.order("created_at DESC").page(params[:page]).per(50)
   end
 
   def new
@@ -20,22 +22,20 @@ class GamepostsController < ApplicationController
   end
 
   def show
-    @games = Game.find(params[:id])
-    @reviews = Game.where(params[:id])
-    @reviews = Review.order('created_at DESC').limit(10)
+    @reviews = @games.reviews.order('created_at DESC').limit(10).page(params[:page]).per(24)
+    @review = @games.reviews.build
   end
 
   def destroy
-    @games = Game.find(params[:id])
-    @games.destroy if @games.user_id == current_user.id
+    if @games.user_id == current_user.id
+      @games.destroy
+    end  
   end
 
   def edit
-    @games = Game.find(params[:id])
   end
 
   def update
-    @games = Game.find(params[:id])
     if @games.user_id == current_user.id
       @games.update(set_game)
       if @games.save
@@ -43,7 +43,12 @@ class GamepostsController < ApplicationController
       else
         render :edit
       end
-    end
+    end  
+  end
+
+  def set_search
+    @search = Game.ransack(params[:q])
+    @search_products = @search.result.page(params[:page])
   end
 
   private
@@ -56,8 +61,13 @@ class GamepostsController < ApplicationController
     params.permit(:image, :name, :platform, :genre, :text)
   end
 
-  def move_to_index
+  def set_game
+    @games = Game.find(params[:id])
+  end
+
+
+  def move_to_index 
     redirect_to action: :index unless
     user_signed_in?
-  end
+  end 
 end

@@ -2,12 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.notification {
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "SoukouMincho";
+}
 .review {
   height: 650px;
   width: 1252px;
-  position: absolute;
-  top: 110px;
-  margin-left: 29px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px;
   text-align: center;
   background-color: #fafafa;

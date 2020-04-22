@@ -4,7 +4,7 @@
       .card
         - @search_products.each do |game|
           .box
-            %a.links{:href => "/gameposts/#{game.id}"}
+            %a.links{:href => "/games/#{game.id}"}
               %img.content_post{:src => "#{game.image}"}/
             %p.name-g= (game.name)
       %div
