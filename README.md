@@ -14,7 +14,6 @@
 - docker
 - GitHub
 - Nginx, Puma
-- circleci
 
 # 【内容】
 - ゲームソフト紹介サイトをクリックするとホーム画面に戻る
