@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   before_action :set_search
-  before_action :set_game, only: %i[show destroy edit update]
+  before_action :set_games, only: %i[show destroy edit update]
 
   def index
     @games = Game.all
@@ -61,7 +61,7 @@ class GamesController < ApplicationController
     params.permit(:image, :name, :platform, :genre, :text)
   end
 
-  def set_game
+  def set_games
     @games = Game.find(params[:id])
   end
 

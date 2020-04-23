@@ -3,8 +3,9 @@
 
 # 【URL】
  http://gamepost01-ELB-363962544.ap-northeast-1.elb.amazonaws.com
+
  http://52.193.234.194
- 
+
 # 【使用言語、フレームワーク】
 - HTML/CSS(SCSS) 
 - rails 5.2.2
