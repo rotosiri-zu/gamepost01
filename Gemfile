@@ -71,7 +71,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise'
 gem 'devise-i18n-views'
 gem 'dotenv-rails'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'kaminari'
