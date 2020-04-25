@@ -15,6 +15,7 @@ class GamesController < ApplicationController
   def create
     @games = Game.create(game_params)
     if @games.save
+      flash[:success] = 'アイテムを登録しました'
       redirect_to root_path
     else
       render :new
@@ -28,6 +29,7 @@ class GamesController < ApplicationController
 
   def destroy
     if @games.user_id == current_user.id
+      flash[:danger] = 'アイテムを削除しました'
       @games.destroy
     end  
   end
@@ -39,6 +41,7 @@ class GamesController < ApplicationController
     if @games.user_id == current_user.id
       @games.update(set_game)
       if @games.save
+        flash[:success] = 'アイテムを更新しました'
         redirect_to root_path
       else
         render :edit
