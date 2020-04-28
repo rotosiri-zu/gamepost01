@@ -19,6 +19,7 @@
       .buttons.text-center
         = link_to 'Amazonで詳しく見る', "https://www.amazon.co.jp/", class: 'btnbtn-lgbtn-outline-warning'
         = link_to '楽天で詳しく見る', "https://www.rakuten.co.jp/", class: 'btnbtn-lgbtn-outline-danger'
+        = link_to '価格ドットコムで詳しく見る', "https://kakaku.com/", class: 'btnbtn-lgbtn-outline-kakaku'
 - if user_signed_in? && current_user.id == @games.user_id
   .container-box2
     .item-box
