@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   root to: 'games#index'
   resources :games do
     resources :reviews
-    resources :videogames
-    resources :pcgame
-    resources :socialgame
-   end
+  end
+  resources :videogames
+  resources :pcgame
+  resources :socialgame
    get 'games/:id/destroy' => 'games#destroy'
    resources :users
    get 'users/users/:id' => 'users#listofposts'

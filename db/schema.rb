@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_193839) do
+ActiveRecord::Schema.define(version: 2020_04_27_142506) do
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
     t.integer "user_id"
   end
 
+  create_table "pcgames", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_pcgames_on_game_id"
+    t.index ["review_id"], name: "index_pcgames_on_review_id"
+    t.index ["user_id"], name: "index_pcgames_on_user_id"
+  end
+
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "title", null: false
@@ -32,6 +43,17 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
     t.integer "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "socialgames", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_socialgames_on_game_id"
+    t.index ["review_id"], name: "index_socialgames_on_review_id"
+    t.index ["user_id"], name: "index_socialgames_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -47,4 +69,24 @@ ActiveRecord::Schema.define(version: 2020_04_03_193839) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "videogames", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_videogames_on_game_id"
+    t.index ["review_id"], name: "index_videogames_on_review_id"
+    t.index ["user_id"], name: "index_videogames_on_user_id"
+  end
+
+  add_foreign_key "pcgames", "games"
+  add_foreign_key "pcgames", "reviews"
+  add_foreign_key "pcgames", "users"
+  add_foreign_key "socialgames", "games"
+  add_foreign_key "socialgames", "reviews"
+  add_foreign_key "socialgames", "users"
+  add_foreign_key "videogames", "games"
+  add_foreign_key "videogames", "reviews"
+  add_foreign_key "videogames", "users"
 end
