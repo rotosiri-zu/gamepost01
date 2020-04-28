@@ -1,7 +1,6 @@
 %header.header
   .header__logo
     .game__logo
-      %a.hamburger-menu
       %h1.grid
         %a{:href => "/"} ゲームソフト投稿サイト
       %span.nav_toggle
@@ -13,11 +12,11 @@
           %li.nav_menu_li 
             = link_to "\uf015　ホーム", root_path, class: 'fa'
           %li.nav_menu_li
-            = link_to "" 
+            = link_to "テレビゲーム", videogames_path, class: 'fa'
           %li.nav_menu_li
-            = link_to "" 
+            = link_to "PCゲーム", pcgame_index_path, class: 'fa'
           %li.nav_menu_li
-            = link_to "" 
+            = link_to "ソーシャルゲーム", socialgame_index_path, class: 'fa'
       .form-group
         = search_form_for @search, url: games_path do |f|
           = f.text_field :name_cont ,placeholder: '検索するテキストを入力...'
@@ -34,7 +33,7 @@
           %a.post-h{:href => "/games/new"} 投稿する
       - else
         .grid-6
-          = link_to "ログイン", new_user_session_path, class: 'post'
-          = link_to "新規登録", new_user_registration_path, class: 'posts'
+          = link_to "\uf2f6 ログイン", new_user_session_path, class: 'post fa'
+          = link_to "\uf234 新規登録", new_user_registration_path, class: 'posts fa'
 .header.container
   = render partial: 'shared/flash'
