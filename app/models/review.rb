@@ -1,8 +1,8 @@
 class Review < ApplicationRecord
   belongs_to :game
   belongs_to :user
-  has_many :pcgame
-  has_many :videogame
-  has_many :socialgame
+  has_many :pcgames
+  has_many :videogames
+  has_many :socialgames
   validates :nickname, :rate, :title, :review, presence: true
 end

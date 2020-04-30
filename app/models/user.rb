@@ -3,10 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :game
+  has_many :games
   has_many :reviews
-  has_many :pcgame
-  has_many :videogame
-  has_many :socialgame
+  has_many :pcgames
+  has_many :videogames
+  has_many :socialgames
   validates :nickname, :email, :password, :password_confirmation, presence: true
 end

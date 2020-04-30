@@ -1,3 +1,43 @@
 // Place all the styles related to the videogames controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main.contents {
+  width: 1645px;
+  height: 5590px;
+  padding-left: 10px;
+  padding-right: 10px;
+  .main.content-rlght {
+    height: 100%;
+    padding-left: 200px;
+    .main.content-rlght-group {
+      padding-left: 0%;
+      width: 100%;
+      height: 5774.970px;
+      float: right;
+      .s-padding-left-small {
+        padding-left: 10px;
+        height: 5774.970px;
+      }
+    }
+  }
+  .main.sidecontent {
+    width: 200px;
+    margin-left: -200px;
+    float: none;
+    height: 4210.660px;
+    .main.sidemenu {
+      padding-right: 6px;
+      height: 100%;
+      border-right: 1px solid #ddd;
+      .a-section.a-spacing-base {
+        margin-bottom: 14px!important;
+        height: 100%;
+        .left_nav.browseBox {
+          height: 2254px;
+          font-family: arial,helvetica,sans-serif;
+        }
+      }
+    }
+  }
+}
