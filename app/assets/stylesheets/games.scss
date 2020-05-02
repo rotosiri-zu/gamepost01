@@ -14,7 +14,7 @@ body {
 // header 
 
 header.header {
-  background-color: #00ffcc;
+  background-color: palegoldenrod;
   position: fixed;
   top: 0;
   left: 0;
@@ -138,37 +138,36 @@ header.header {
         display: inline-block;
         font-size: 14px;
       }
-
-    .grid-6 {
-      position: absolute;
-      width: 264px;
-      top:10px;
-      left: 1351px;
-      a.post {
-        height: 24px;
-        width: 120px;
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid black;
-        display: inline-block;
-        font-size: 14px;
-        padding-top: 10px;
-      }
-      a.posts {
-        height: 24px;
-        width: 120px;
-        color: black;
-        margin-left: 10px;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid black;
-        display: inline-block;
-        font-size: 14px;
-        padding-top: 10px;
+      .grid-6 {
+        position: absolute;
+        width: 264px;
+        top:10px;
+        left: 1351px;
+        a.post {
+          height: 24px;
+          width: 120px;
+          color: black;
+          text-align: center;
+          text-decoration: none;
+          border: 2px solid black;
+          display: inline-block;
+          font-size: 14px;
+          padding-top: 10px;
+        }
+        a.posts {
+          height: 24px;
+          width: 120px;
+          color: black;
+          margin-left: 10px;
+          text-align: center;
+          text-decoration: none;
+          border: 2px solid black;
+          display: inline-block;
+          font-size: 14px;
+          padding-top: 10px;
+        }
       }
     }
-  }
   .form-group {
     position: absolute;
     left: 578px;
@@ -187,9 +186,8 @@ header.header {
         background-color: blue;
       }
     }
-  
   }
-  }
+}
 // main
 
 .content {
@@ -198,19 +196,22 @@ header.header {
 }
 
 .top-content {
+  background-color: skyblue;
   height: 3500px;
   width: 1655px;
-  margin-top: 100px;
 }
 
 .content-box {
-  height: 1020px;
+  height: 100%;
   width: 100%;
 }
 
 .card {
+  position: absolute;
+  top: 150px;
   margin-left: 65px;
   .box {
+    background-color: white;
     float: left;
     margin-left: 80px; 
     margin-bottom: 50px;
@@ -245,7 +246,6 @@ header.header {
     width: 100%;
     background: grey;
   }
-  
   .success {
     text-align: center;
     height:250px;
@@ -275,7 +275,6 @@ header.header {
       cursor: pointer;
     }
   }
-
   form  {
     height: 1000px;
     width: 400px;
@@ -295,7 +294,6 @@ header.header {
     padding-left: 13px;
     padding-bottom: 10px;
   }
-
   .img {
     width: 250px;
     padding-bottom: 10px;
@@ -333,7 +331,6 @@ header.header {
     width: 100%;
     background: grey;
   }
-  
   .success {
     text-align: center;
     height:250px;
@@ -362,7 +359,6 @@ header.header {
       cursor: pointer;
     }
   }
-
   form  {
     height: 1100px;
     width: 400px;
@@ -376,7 +372,6 @@ header.header {
       padding-bottom: 25px;
     }
   }
-
   .img-g {
     padding-top: 20px;
     padding-left: 55px;
@@ -436,6 +431,7 @@ li {
     margin-left: 10px;
   }
 }
+
 .actions {
   input[type="submit" i] {
     margin-top: 30px;
@@ -672,6 +668,47 @@ padding-right: 10px;
       padding-top: 10px;
       width: 680px;
       height: 90px;
+    }
+  }
+}
+
+// footer 
+
+footer {
+  height: 500px;
+  background-color: palegoldenrod;
+  .footer-content {
+    padding: 4em 0;
+    position: absolute;
+    background-color: purple;
+    top: 3602px;
+    width: 100%;
+    height: 150px;
+    .content-h {
+      width: 1170px;
+      height: 150px;
+      margin-right: auto;
+      margin-left: auto;
+      .row-h {
+        height: 150px;
+        margin-right: -15px;
+        margin-left: -15px;
+        .footer-logo-box {
+          padding-left: 15px;
+          padding-right: 15px;
+          height: 112px;
+          width: 270px;
+          margin-bottom: 30px;
+          float: left;
+          .footer-logo {
+            display: block;
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+            height: 42px;
+          }
+        }
+      }
     }
   }
 }
