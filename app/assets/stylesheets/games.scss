@@ -14,7 +14,7 @@ body {
 // header 
 
 header.header {
-  background-color: palegoldenrod;
+  background-color: #00ffcc;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +25,7 @@ header.header {
     .game__logo {
       height: 60px;
       width: 350px;
+      padding-left: 143px;
       a#nav-hamburger-menu {
         height: 40px;
         margin: 10px 7px 10px 7px;
@@ -42,7 +43,7 @@ header.header {
       .grid {
         padding-top: 10px;
         text-align: center;
-        margin-left: 82px;
+        margin-left: 105px;
         float: left;
         a {
           color: black;
@@ -198,7 +199,7 @@ header.header {
 .top-content {
   background-color: skyblue;
   height: 3500px;
-  width: 1655px;
+  width: 1665px;;
 }
 
 .content-box {
@@ -676,7 +677,7 @@ padding-right: 10px;
 
 footer {
   height: 500px;
-  background-color: palegoldenrod;
+  background-color: #00ffcc;
   .footer-content {
     padding: 4em 0;
     position: absolute;
@@ -706,6 +707,14 @@ footer {
             width: 100%;
             margin-bottom: 10px;
             height: 42px;
+            a {
+              font-size: 20px;
+              letter-spacing: 2px;
+              color: #ccc;
+              float: left;
+              padding: 7px 10px 7px 12px;
+              text-decoration: none;
+            }
           }
         }
       }
