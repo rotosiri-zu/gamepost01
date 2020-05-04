@@ -676,6 +676,8 @@ padding-right: 10px;
 // footer 
 
 footer {
+  color: #ccc;
+  font-weight: 300;
   height: 500px;
   background-color: #00ffcc;
   .footer-content {
@@ -714,6 +716,14 @@ footer {
               float: left;
               padding: 7px 10px 7px 12px;
               text-decoration: none;
+            }
+          }
+          p {
+            display: block;
+            margin: 0 0 10px;
+            small {
+              font-size: 85%;
+              padding-left: 10px;
             }
           }
         }
