@@ -23,7 +23,7 @@ class GamesController < ApplicationController
   end
 
   def show
-    @reviews = @games.reviews.order('created_at DESC').limit(10).page(params[:page]).per(24)
+    @reviews = @games.reviews.order('created_at DESC').limit(15)
     @review = @games.reviews.build
   end
 
