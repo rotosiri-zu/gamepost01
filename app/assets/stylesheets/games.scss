@@ -227,7 +227,6 @@ header.header {
         margin: 0;
         width: 200px;
         height: 220px;
-        color: both;
         display: inline-block;
       } 
     }
@@ -724,6 +723,61 @@ footer {
             small {
               font-size: 85%;
               padding-left: 10px;
+            }
+          }
+        }
+        .footer-box01 {
+          float: left;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-bottom: 30px;
+          width: 262.500px;
+          height: 120px;
+          ul {
+            width: 262.500px;
+            height: 120px;
+            li {
+              padding-top: 15px;
+              margin: 0 0 14px 0;
+              line-height: 16px;
+              a {
+                color: #ccc;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        .footer-box02 {
+          float: left;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-bottom: 30px;
+          width: 262.500px;
+          height: 120px;
+          ul {
+            width: 262.500px;
+            height: 120px;
+            li {
+              padding-top: 15px;
+              margin: 0 0 14px 0;
+              line-height: 16px;
+            }
+          }
+        }
+        .footer-box03 {
+          float: left;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-bottom: 30px;
+          width: 262.500px;
+          height: 120px;
+          ul {
+            width: 262.500px;
+            height: 120px;
+            li {
+              padding-top: 15px;
+              margin: 0 0 14px 0;
+              line-height: 16px;
             }
           }
         }
