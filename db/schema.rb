@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_27_142506) do
+ActiveRecord::Schema.define(version: 2020_05_07_102605) do
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2020_04_27_142506) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "user_id"
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_likes_on_game_id"
+    t.index ["user_id", "game_id"], name: "index_likes_on_user_id_and_game_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "pcgames", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -80,6 +90,8 @@ ActiveRecord::Schema.define(version: 2020_04_27_142506) do
     t.index ["user_id"], name: "index_videogames_on_user_id"
   end
 
+  add_foreign_key "likes", "games"
+  add_foreign_key "likes", "users"
   add_foreign_key "pcgames", "games"
   add_foreign_key "pcgames", "reviews"
   add_foreign_key "pcgames", "users"
