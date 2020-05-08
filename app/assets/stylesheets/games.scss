@@ -4,7 +4,6 @@
 
 body {
   width: auto;
-  height: 700px;
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -408,17 +407,19 @@ li {
   color: red;
   padding-top: 20px;
 }
-
-.new_user-s {
+.new_user-h {
+  height: 980px;
+  .new_user-s {
   padding-top: 20px;
+  margin-top: 120px;
   height: 740px;
   width: 600px;
   position: absolute;
   left: 522px;
   border: 2px solid silver;
+  }
 }
-
-// sessions
+  // sessions 
 
 .field {
   height: 100px;
@@ -675,15 +676,12 @@ padding-right: 10px;
 // footer 
 
 footer {
-  color: #ccc;
+  color:  black;
   font-weight: 300;
-  height: 500px;
+  margin-top: 50px;
   background-color: #00ffcc;
   .footer-content {
     padding: 4em 0;
-    position: absolute;
-    background-color: purple;
-    top: 3602px;
     width: 100%;
     height: 150px;
     .content-h {
@@ -711,7 +709,7 @@ footer {
             a {
               font-size: 20px;
               letter-spacing: 2px;
-              color: #ccc;
+              color:  black;
               float: left;
               padding: 7px 10px 7px 12px;
               text-decoration: none;
@@ -741,7 +739,7 @@ footer {
               margin: 0 0 14px 0;
               line-height: 16px;
               a {
-                color: #ccc;
+                color: black;
                 text-decoration: none;
               }
             }
@@ -762,7 +760,7 @@ footer {
               margin: 0 0 14px 0;
               line-height: 16px;
               a {
-                color: #ccc;
+                color:  black;
                 text-decoration: none;
               }
             }
@@ -783,7 +781,7 @@ footer {
               margin: 0 0 14px 0;
               line-height: 16px;
               a {
-                color: #ccc;
+                color:  black;
                 text-decoration: none;
               }
             }
