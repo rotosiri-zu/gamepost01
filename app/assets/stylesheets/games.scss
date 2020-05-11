@@ -234,6 +234,10 @@ header.header {
 
 .name-g {
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+.star {
+  height: 20px;
 }
 
 // new.edit
@@ -653,7 +657,7 @@ padding-right: 10px;
     .a-row {
       margin-bottom: 10px;
       .review-content {
-        width: 61px;
+        width: 120px;
         height: 31px;
         .profile-nickname {
           padding-bottom: 10px;
