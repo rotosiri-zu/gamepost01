@@ -5,7 +5,7 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-    @games = Game.order("created_at DESC").limit(26)
+    @games = Game.order("created_at").limit(26)
   end
 
   def new
