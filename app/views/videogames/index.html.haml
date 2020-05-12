@@ -3,7 +3,7 @@
     .main.content-rlght-group
       .s-padding-left-small
         .card
-          - @games.each do |game|
+          - @games.each.with_index(1) do |game, i|
             .box
               %a.links{:href => "/games/#{game.id}"}
                 %img.content_post{:src => "#{game.image}"}/
@@ -20,4 +20,8 @@
                   readOnly: true,
                   score: '#{game.reviews.average(:rate).to_f.round(1)}',
                 });
+              .div
+                第
+                = i
+                位
     = render 'videogames/sidemenu'
