@@ -1,4 +1,5 @@
 class SocialgameController < ApplicationController
+  
   def index
   end
 
