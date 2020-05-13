@@ -6,4 +6,8 @@ class Game < ApplicationRecord
   has_many :videogames
   validates :image, :name, :platform, :genre, :text, presence: true
   validates :user_id, presence: true
+
+  def review_average
+    reviews.average(:rate).round if reviews.present?
+  end
 end
