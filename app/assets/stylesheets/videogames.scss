@@ -41,3 +41,56 @@
     }
   }
 }
+
+.content {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top-content {
+  background-color: skyblue;
+  height: 3500px;
+  width: 1665px;;
+}
+
+.content-box {
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  position: absolute;
+  top: 150px;
+  margin-left: 65px;
+  .box-g{
+    background-color: white;
+    float: left;
+    margin-left: 80px; 
+    margin-bottom: 50px;
+    height: 400px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    .links {
+      .content_post {
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        margin: 0;
+        width: 200px;
+        height: 220px;
+        display: inline-block;
+      } 
+    }
+  }
+}
+
+.name-g {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.star {
+  height: 20px;
+}
+.ranking {
+  padding-top: 10px;
+}
