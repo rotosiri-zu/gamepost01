@@ -31,6 +31,7 @@ class GamesController < ApplicationController
     if @games.user_id == current_user.id
       flash[:danger] = 'アイテムを削除しました'
       @games.destroy
+      redirect_to root_path
     end  
   end
 
