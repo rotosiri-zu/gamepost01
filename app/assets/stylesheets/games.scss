@@ -215,7 +215,7 @@ header.header {
     float: left;
     margin-left: 80px; 
     margin-bottom: 50px;
-    height: 320px;
+    height: 400px;
     width: 200px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.18);
     .links {
@@ -239,7 +239,9 @@ header.header {
 .star {
   height: 20px;
 }
-
+.ranking {
+  padding-top: 10px;
+}
 // new.edit
 
 .contents-row {
@@ -558,7 +560,7 @@ padding-right: 10px;
         background-position: center center;
         margin: 0;
         width: 300px;
-        height: 315px;
+        height: 360px;
         color: both;
         display: inline-block;
       } 
