@@ -43,3 +43,11 @@
 ・CircleCIの導入
 ・コードを美しく記述
 ・AWSのその他の機能使用
+
+# 環境構築手順
+1 イメージを生成する
+$ docker-compose build
+2 コンテナを起動する データベースセットアップ前にコンテナを起動していないとデータベースのセットアップコマンドが失敗する
+$ docker-compose up
+3 データベースをセットアップする
+$ docker-compose run web rails db:create rails db:migrate
