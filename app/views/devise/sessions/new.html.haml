@@ -1,5 +1,5 @@
 .new_user-h
-  .new_user-s
+  .new_user-sj
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       = render 'layouts/flash'
       .field
@@ -21,5 +21,10 @@
           = f.label :remember_me
       .actions
         = f.submit "ログイン"
-        
-        = render 'devise/sessions/testuser'
+    = form_for(User.new, as: :user, url: session_path(:user)) do |f|
+      .field-h
+        = f.hidden_field :nickname ,value: "テストユーザー"
+        = f.hidden_field :email ,value: "test@example.com"
+        = f.hidden_field :password ,value: "testtest"
+      .actions-h
+        = f.submit "カンタンログイン"
