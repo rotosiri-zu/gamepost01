@@ -2,10 +2,6 @@
   .top-content
     .content-box
       .card
-        -# - if @search_products
-        -#   - render partial: 'gameposts/games', collection: @search_products
-        -# - else
-        -#   - render partial: 'gameposts/games', collection: @games
         - @games.each do |game|
           .box
             %a.links{:href => "/games/#{game.id}"}

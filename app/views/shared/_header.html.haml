@@ -18,7 +18,7 @@
           %li.nav_menu_li
             = link_to "ソーシャルゲーム", socialgame_index_path, class: 'fa'
       .form-group
-        = search_form_for @search, url: games_path do |f|
+        = search_form_for @search, url: search_games_path do |f|
           = f.text_field :name_cont ,placeholder: '検索するテキストを入力...'
           = f.submit ("検索") , class: 'btns'
       - if user_signed_in?
