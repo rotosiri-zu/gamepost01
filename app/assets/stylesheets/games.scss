@@ -198,17 +198,43 @@ header.header {
 .top-content {
   background-color: skyblue;
   height: 3500px;
-  width: 1665px;;
+  width: 1665px;
 }
 
 .content-box {
-  height: 100%;
+  background: url("6602480i.jpeg") center center no-repeat;
+  height: 916px;
   width: 100%;
+  background-size: 1685px;
+  h1.cover-contents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    font-size: 6vw;
+    text-shadow: black 1px 1px 0px, 
+                 black -1px 1px 0px,
+                 black 1px -1px 0px,
+                 black -1px -1px 0px;
+  }
+}
+
+h1.title {
+  text-align: center;
+  padding-top: 50px;
+  height: 100px;
+  font-size: 50px;
 }
 
 .card {
-  position: absolute;
-  top: 150px;
+  margin-top: 50px;
   margin-left: 65px;
   .box {
     background-color: white;
