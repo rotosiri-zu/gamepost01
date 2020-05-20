@@ -1,22 +1,26 @@
 %main.content
   .top-content
     .content-box
-      .card
-        - @games.each do |game|
-          .box
-            %a.links{:href => "/games/#{game.id}"}
-              %img.content_post{:src => "#{game.image}"}/
-            %p.name-g= (game.name)
-            .star
-              %i{:id => "star-rate-#{game.id}"}
-            :javascript
-              $('#star-rate-#{game.id}').raty({
-                size: 36,
-                starOff:  '#{asset_path('star-off.png')}',
-                starOn : '#{asset_path('star-on.png')}',
-                starHalf: '#{asset_path('star-half.png')}',
-                half: true,
-                readOnly: true,
-                score: '#{game.reviews.average(:rate).to_f.round(1)}',
-              });
-              
+      %h1.cover-contents
+        あなたが好きなゲームは何ですか？みんなでシェアしましょう。
+    %h1.title
+      ユーザー新着投稿
+    .card
+      - @games.each do |game|
+        .box
+          %a.links{:href => "/games/#{game.id}"}
+            %img.content_post{:src => "#{game.image}"}/
+          %p.name-g= (game.name)
+          .star
+            %i{:id => "star-rate-#{game.id}"}
+          :javascript
+            $('#star-rate-#{game.id}').raty({
+              size: 36,
+              starOff:  '#{asset_path('star-off.png')}',
+              starOn : '#{asset_path('star-on.png')}',
+              starHalf: '#{asset_path('star-half.png')}',
+              half: true,
+              readOnly: true,
+              score: '#{game.reviews.average(:rate).to_f.round(1)}',
+            });
+            
