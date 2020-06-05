@@ -22,8 +22,8 @@ services:
       - "3000:3000"
     links:
       - db
-    environment:
-      RAILS_ENV: 'production'
+    # environment:
+    #   RAILS_ENV: 'production'
     tty: true
     stdin_open: true
 
